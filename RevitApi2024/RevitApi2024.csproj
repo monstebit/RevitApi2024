@@ -30,11 +30,7 @@
         <None Include="..\Readme.md" Link="NuGet\Readme.md" PackagePath="" Pack="true"/>
         <Content Include="Content\$(PackVersion)\*.*" PackagePath="ref\$(RevitFramework)\" />
     </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Content\2024.2.0\" />
-    </ItemGroup>
-
+    
     <PropertyGroup>
         <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
         <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
