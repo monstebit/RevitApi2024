@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net48</TargetFramework>
+        <NoWarn>$(NoWarn);NU5128;NU5131</NoWarn>
+        <IncludeBuildOutput>false</IncludeBuildOutput>
+        <OutputPath>..\output</OutputPath>
+        <PackageId>UK.Revit.Api.2024</PackageId>
+        <PackageVersion>2024.2.0</PackageVersion>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <PackageType>Dependency</PackageType>
+        <Authors>UK</Authors>
+        <Description>Library for Revit 2024 plugin development</Description>
+        <PackageTags>revit2024;api;sdk</PackageTags>
+        <RepositoryType>git</RepositoryType>
+        <RepositoryUrl>https://github.com/monstebit/RevitApi2024.git</RepositoryUrl>
+        <PackageReadmeFile>Readme.md</PackageReadmeFile>
+        <PackageLicenseFile>License.md</PackageLicenseFile>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <PackVersion>2024.2.0</PackVersion>
+        <RevitFramework>net48</RevitFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="..\License.md" Link="NuGet\License.md" PackagePath="" Pack="true" />
+        <None Include="..\Readme.md" Link="NuGet\Readme.md" PackagePath="" Pack="true"/>
+        <Content Include="Content\$(PackVersion)\*.*" PackagePath="ref\$(RevitFramework)\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Content\2024.2.0\" />
+    </ItemGroup>
+
+    <PropertyGroup>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+        <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+    </PropertyGroup>
+
+</Project>
